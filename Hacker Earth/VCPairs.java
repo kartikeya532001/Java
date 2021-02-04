@@ -14,17 +14,17 @@ public class VCPairs {
 			n = scan.nextInt();
 			a = scan.next();
 
-			for (int i = 1; i <= n; i++) {
-				for (int k = i-1; k < i; k++) {
-					if (a.charAt(i) == 'a' || a.charAt(i) == 'e' || a.charAt(i) == 'i' || a.charAt(i) == 'o'
-							|| a.charAt(i) == 'u') {
-						if (a.charAt(k) != 'a' && a.charAt(k) != 'e' && a.charAt(k) != 'i' && a.charAt(k) != 'o'
-								&& a.charAt(k) != 'u') {
-							s++;
-						}
-					}
+			for (int i = 0; i < n - 1; i++) {
+
+				if ((a.charAt(i + 1) == 'a' || a.charAt(i + 1) == 'e' || a.charAt(i + 1) == 'i'
+						|| a.charAt(i + 1) == 'o' || a.charAt(i + 1) == 'u')
+						&& (a.charAt(i) != 'a' && a.charAt(i) != 'e' && a.charAt(i) != 'i' && a.charAt(i) != 'o'
+								&& a.charAt(i) != 'u')) {
+					s++;
 				}
+
 			}
+
 			System.out.println(s);
 		}
 		scan.close();
