@@ -8,8 +8,8 @@ class Pro {
 	}
 
 	int cal(int a) {
-
-		return (a * a);
+		b = 6;
+		return (a * b);
 	}
 
 	int cal(int a, int b) {
